@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .quantity { 
+            display: flex;
+            justify-content: center;  
+        }
+
+        .quantity button {
+            width: 45px;
+            height: 45px;
+            border: 1px solid #000;
+            border-radius: 0;
+            background: #fff;
+        }
+
+        .quantity input {
+            border: none;
+            border-top: 1px solid #000;
+            border-bottom: 1px solid #000;
+            text-align: center;
+            width: 100px;
+            font-size: 20px;
+            color: #000;
+            font-weight: 300;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+   
+    <div class="quantity">
+        <button class="btn minus-btn disabled" type="button">-</button>
+        <input type="text" id="quantity" value="1">
+        <button class="btn plus-btn" type="button"> + </button>
+    </div>
+
+    <script>
+        document.querySelector(".minus-btn").setAttribute("disabled", "disabled");
+        
+        var valueCount
+
+        document.querySelector(".plus-btn").addEventListener("click", function(){
+
+            valueCount = document.getElementById("quantity").value;
+            valueCount++;
+            document.getElementById("quantity").value = valueCount
+        })
+    </script>
+</body>
+</html>

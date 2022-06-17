@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <span id="Num">Num</span>
+    <button id="increase">+</button>
+    <button id="decrease">-</button>
+
+    <input id="age" value="A" />
+    <button onclick="abc()">Try it</button> 
+    <p id="demo"></p>
+
+    <script>
+        var Main = document.getElementById("Num");
+        var plus = document.getElementById("increase");
+        var min = document.getElementById("decrease");
+
+        var number = 0;
+
+        //easy format  plus.onclick=function  (){};
+        plus.addEventListener("click", function () {
+
+            // number = number + 1;
+            number += 1;
+
+            Main.innerHTML = number;
+
+        });
+
+        
+        //easy format  min.onclick=function  (){};
+        min.addEventListener("click", function () {
+
+            // number = number + 1;
+            number -= 1;
+
+            Main.innerHTML = number;
+
+        });
+
+
+function abc() {
+  let voteable;
+  let age = document.getElementById("age").value;
+  if (isNaN(age)) {
+    voteable = "Input is not a number";
+  } 
+  
+  else {
+    voteable = (age < 18) ? "Too young" : "Old enough";
+  }
+  document.getElementById("demo").innerHTML = voteable ;
+  
+}
+    </script>
+</body>
+
+</html>
